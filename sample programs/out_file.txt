@@ -1,0 +1,6 @@
+hello:7
+world:7
+parth:1
+shah:1
+sachin:1
+tendulkar:1

@@ -8,7 +8,6 @@ import re
 import argparse
 
 if __name__ == "__main__":
-    #NPS: Use parseargs or argpaser module
     input_fname = ''
     output_fname = '' 
     parser = argparse.ArgumentParser(description='Calculate frequency of words in a file')
@@ -23,13 +22,11 @@ if __name__ == "__main__":
     word_frequency = {}
        
     # Open the file. The argument has to be passed as 1st argument
-    #NPS: Add Try exception if file does not exist
     try:
         with open(args.input) as f: #ps: Is it better to have new variable or use this directly?
             for line in f: # Iterate over each line of file
                 print(f"line = {line}")
                 words = re.split(' |;|,|\.', line) #ps todo see if more delimiters need to be added
-                #NPS: Try using f"words = {words}" new way of print
                 print(f"words = {words}")
                 words = list(filter(None, words)) #remove empty strings
                 
@@ -45,7 +42,6 @@ if __name__ == "__main__":
                     else:
                         word_frequency[word] = 1
                 print(word_frequency)
-                #NPS: no need to add \n It will always print in new line
                 print("\n")
     except BaseException as error:
         print('An exception occurred: {}'.format(error))
