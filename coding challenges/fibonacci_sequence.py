@@ -9,4 +9,8 @@ def generate_fibonacci(n):
 
 n = 1
 fib_sequence = generate_fibonacci(n)
-print(fib_sequence)
+print("Fibonacci(1) = ", fib_sequence)
+
+n = 5
+fib_sequence = generate_fibonacci(n)
+print("Fibonacci(5) = ",fib_sequence)
