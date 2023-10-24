@@ -1,16 +1,20 @@
-def generate_fibonacci(n):
-    fibonacci_sequence = [0, 1]
-    
-    while len(fibonacci_sequence) < n:
-        next_number = fibonacci_sequence[-1] + fibonacci_sequence[-2]
-        fibonacci_sequence.append(next_number)
-    
-    return fibonacci_sequence
+def fibonacci(n):
+    if n == 0 or n == 1:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
 
-n = 1
-fib_sequence = generate_fibonacci(n)
-print("Fibonacci(1) = ", fib_sequence)
+def fibonacci_sequence(n):
+    i = 0
+    while i < n:
+        print(fibonacci(i), end=" ")
+        i = i + 1
+    
+    
+if __name__ == "__main__":
+    fibonacci_sequence(1)
+    fibonacci_sequence(2)
+    fibonacci_sequence(3)
+    fibonacci_sequence(4)
+    fibonacci_sequence(5)
 
-n = 5
-fib_sequence = generate_fibonacci(n)
-print("Fibonacci(5) = ",fib_sequence)
+ 
